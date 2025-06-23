@@ -1,5 +1,7 @@
-﻿using System.Text.RegularExpressions;
-
+﻿using Practico.Datos;
+using Practico.Utilidades;
+using System.Text.RegularExpressions;
+internal class Program { 
 static RepositorioVehiculosOpedadores repo = new();
 static void Main(string[] args)
 {
