@@ -32,6 +32,8 @@ namespace Practico.Entidades
             if (Regex.IsMatch(Patente ?? "", @"^[A-Z]{2}\d{3}[A-Z]{2}$") && Anio < 2016)
                 yield return new ValidationResult("Las patentes nuevas (AB123CD) son válidas solo desde el año 2016.");
         }
-        //aun no esta terminado
+        public abstract override bool Equals(object? obj);
+        public abstract override int GetHashCode();
+
     }
 }

@@ -11,10 +11,7 @@ namespace Practico.Entidades
     {
         public int Cilindrada { get; set; }
         public override decimal CalcularCostoUso() => 5 * (DateTime.Now.Year - Anio) + 0.1m * Cilindrada;
-        public override string Informar()
-        {
-            return base.Informar() + $" | Cilindrada: {Cilindrada}cc | Costo Uso: ${CalcularCostoUso():0.00}";
-        }
+      
         public override IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
             foreach (var result in base.Validate(validationContext))
@@ -22,6 +19,26 @@ namespace Practico.Entidades
             if (Cilindrada <= 0)
                 yield return new ValidationResult("La cilindrada debe ser un número positivo.");
         }
-        //aun no esta terminado
+        public override bool Equals(object? obj)
+        {
+            if (obj is Moto other)
+            {
+                return Marca == other.Marca &&
+                       Modelo == other.Modelo &&
+                       Anio == other.Anio &&
+                       Patente == other.Patente &&
+                       Color == other.Color &&
+                       Cilindrada == other.Cilindrada;
+            }
+            return false;
+        }
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Marca, Modelo, Anio, Patente, Color, Cilindrada);
+        }
+        public override string Informar()
+        {
+            return base.Informar() + $" | Cilindrada: {Cilindrada}cc | Costo Uso: ${CalcularCostoUso():0.00}";
+        }
     }
 }
