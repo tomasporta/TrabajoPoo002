@@ -60,7 +60,7 @@ namespace Practico.Windows.Helpers
 
                 Vehiculo v = tipo switch
                 {
-                    "Auto" => new Auto
+                    "Auto" => new Moto
                     {
                         Marca = marca,
                         Modelo = modelo,
