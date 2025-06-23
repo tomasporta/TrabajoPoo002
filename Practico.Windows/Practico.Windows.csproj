@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Practico.Datos\Practico.Datos.csproj" />
+    <ProjectReference Include="..\Practico.Entidades\Practico.Entidades.csproj" />
    
     <ProjectReference Include="..\Practico.Utilidades\Practico.Utilidades.csproj" />
   </ItemGroup>

@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Practico.Datos\Practico.Datos.csproj" />
+    <ProjectReference Include="..\Practico.Entidades\Practico.Entidades.csproj" />
   </ItemGroup>
 
 </Project>

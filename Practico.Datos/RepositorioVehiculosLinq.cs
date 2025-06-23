@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using Practico.Entidades;
+using System.Drawing;
 using System.Text.RegularExpressions;
 
 namespace Practico.Datos
@@ -40,7 +41,7 @@ namespace Practico.Datos
                 Modelo = "Focus",
                 Anio = 2010,
                 Patente = "RNL321",
-                Color = Color.Rojo,
+                Color = Entidades.Color.Rojo,
                 CantPuertas = 4
             });
             lista.Add(new Moto
@@ -49,7 +50,7 @@ namespace Practico.Datos
                 Modelo = "CB500",
                 Anio = 2012,
                 Patente = "JPG214",
-                Color = Color.Azul,
+                Color = Entidades.Color.Azul,
                 Cilindrada = 500
             });
             lista.Add(new Camioneta
@@ -58,7 +59,7 @@ namespace Practico.Datos
                 Modelo = "Hilux",
                 Anio = 2016,
                 Patente = "AB123CD",
-                Color = Color.Negro,
+                Color = Entidades.Color.Negro,
                 CapacidadCarga = 1000
             });
         }

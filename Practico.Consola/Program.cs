@@ -1,4 +1,5 @@
 ﻿using Practico.Datos;
+using Practico.Entidades;
 using Practico.Utilidades;
 using System.Text.RegularExpressions;
 internal class Program { 
@@ -172,13 +173,13 @@ static void CrearVehiculo()
     int capacidadCarga = 0;
     int cilindrada = 0;
     Marca marca = Marca.Ford; // valor por defecto
-    Entidades.Color color = Entidades.Color.Negro;
+    Practico.Entidades.Color color = Practico.Entidades.Color.Negro;
 
     Console.Write("Marca (0=Ford, 1=Chevrolet,3=Honda,4=Fiat, ...): ");
     marca = (Marca)int.Parse(Console.ReadLine()!);
 
     Console.Write("Color (0=Rojo, 1=Negro, ...): ");
-    color = (Entidades.Color)int.Parse(Console.ReadLine()!);
+    color = (Practico.Entidades.Color)int.Parse(Console.ReadLine()!);
 
 
     if (tipo == "auto")
